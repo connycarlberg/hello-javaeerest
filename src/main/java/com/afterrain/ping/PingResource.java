@@ -28,13 +28,15 @@ public class PingResource {
         jsonArrayBuilder.add(
                 Json.createObjectBuilder()
                 .add("id", 1)
-                .add("title", "first ping")
+                .add("from", "hello-javaeerest")
+                .add("title", "ping number 1")
         );
 
         jsonArrayBuilder.add(
                 Json.createObjectBuilder()
                 .add("id", 2)
-                .add("title", "second ping")
+                .add("from", "hello-javaeerest")
+                .add("title", "ping number two")
         );
         
         return jsonArrayBuilder.build();
@@ -45,7 +47,7 @@ public class PingResource {
     @Produces({"application/json"})
     public Ping ping() {
         System.out.println("into first");
-        return new Ping(1, "first ping");
+        return new Ping(1, "hello-javaeerest", "first ping");
     }
 
 }

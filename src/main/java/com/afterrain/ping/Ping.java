@@ -18,15 +18,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Ping {
     
     private int id;
-    private String title;
+    private String from;
+    private String message;
    
 
     public Ping() {
     }
 
-    public Ping(int id, String title) {
+    public Ping(int id, String from, String message) {
         this.id = id;
-        this.title = title;
+        this.from = from;
+        this.message = message;
     }
         
 }
